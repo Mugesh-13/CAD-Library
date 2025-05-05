@@ -56,3 +56,76 @@ Return Book
 
 Fine Amount Calculation
   Automatically calculate late return fines based on due date.
+
+---Model Class--
+Registration for Librarian :-
+int id;
+String name;
+String email;
+String password;
+String confirm_password;
+long dob;
+long mobile_no;
+
+Library:-
+int id;
+String name;
+String address;
+long open_time;
+long close_time;
+long contact_no;
+Map<String,Integer> storage;
+
+Books:-
+int book_id;
+String book_name;
+String author_name;
+String genre;
+int No_of_copies;
+String ISBN_number;
+int year_of_publish;
+List<User> users;
+
+Member :-
+int id;
+String name;
+String email;
+String department;
+long mobile_no;
+double fine_amount;
+List<Books> book;
+
+Transaction:-
+int transaction_id;
+int book_id;
+Long date_of_issue;
+Long return_date;
+Long due_date;
+boolean book_status;
+
+Storage:-
+Map<Integer,Member> member;
+Map<Integer,Librarian> admin;
+Map<Integer,Books> books;
+Map<Integer,Transaction> transaction;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
